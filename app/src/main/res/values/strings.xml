@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ポケモン素早さ調整</string>
+    <string name="baseStats">種族値を入力</string>
+    <string name="individualValue">個体値を入力</string>
+    <string name="effortValue">努力値を入力</string>
+    <string name="level">レベルを入力</string>
+    <string name="objectiveValue">目的の素早さを入力</string>
+
+    <string-array name="effortValueList">
+        <item>0</item>
+        <item>252</item>
+    </string-array>
+
+
+    <string-array name="list">
+        <item>さみしがりや</item>
+        <item>いじっぱり</item>
+        <item>やんちゃ</item>
+        <item>ゆうかん</item>
+        <item>ずぶとい</item>
+        <item>わんぱく</item>
+        <item>のうてんき</item>
+        <item>のんき</item>
+        <item>ひかえめ</item>
+        <item>おっとり</item>
+        <item>うっかりや</item>
+        <item>れいせい</item>
+        <item>おだやか</item>
+        <item>おとなしい</item>
+        <item>しんちょう</item>
+        <item>なまいき</item>
+        <item>おくびょう</item>
+        <item>せっかち</item>
+        <item>ようき</item>
+        <item>むじゃき</item>
+        <item>てれや</item>
+        <item>がんばりや</item>
+        <item>すなお</item>
+        <item>きまぐれ</item>
+        <item>まじめ</item>
+    </string-array>
+</resources>
