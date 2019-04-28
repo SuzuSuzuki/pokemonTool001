@@ -23,5 +23,15 @@ public class Change {
         int value = Integer.parseInt(editChangeString(editText));//editTextで取得した文字列を数値に変換
         return value;
     }
+
+    /**
+     * 文字列をint型に変換するメソッド
+     * @param string 文字列
+     * @return
+     */
+    public int stringChangeValue(String string){
+        int value = Integer.parseInt(string);
+        return value;
+    }
 }
 
