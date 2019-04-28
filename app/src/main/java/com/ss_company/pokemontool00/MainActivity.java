@@ -2,6 +2,7 @@ package com.ss_company.pokemontool00;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -9,7 +10,6 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 /**
  * 作成日：２０１８年１１月２１日
@@ -130,9 +130,13 @@ public class MainActivity extends AppCompatActivity {
         adapterIV.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerIV.setAdapter(adapterIV);
 
+
+
         ArrayAdapter adapterLV = new ArrayAdapter(this, android.R.layout.simple_spinner_item, spinnerItemLV);
         adapterLV.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerLV.setAdapter(adapterLV);
+
+
 
 
     }
