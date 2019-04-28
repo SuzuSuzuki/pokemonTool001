@@ -1,5 +1,7 @@
 package com.ss_company.pokemontool00;
 
+//メインPCのブランチ
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
