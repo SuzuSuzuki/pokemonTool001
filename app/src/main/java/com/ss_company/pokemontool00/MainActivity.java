@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void main(){
+    private void main() {
+
         final EditText editObjectiveValue = (EditText) findViewById(R.id.objectiveValue);      //目的の素早さ
         final EditText editBaseStats = (EditText) findViewById(R.id.baseStats);                //種族値
         final EditText editIndividualValue = (EditText) findViewById(R.id.individualValue);    //個体値
         final EditText editLevel = (EditText) findViewById(R.id.level);                        //レベル
+
         final Calculate cal = new Calculate();//ポケモンの計算クラスのインスタンス
         final Change change = new Change();
         final int effortValueMax = 252;//最大の努力値
@@ -124,27 +128,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void spinner (){
 
-        String spinnerItemIV[] = {"0","30","31"};//個体値一覧
-        String spinnerItemLV[] = {"50","100"};//レベル一覧
+        final String spinnerItemIV[] = {"31","30","0"};//個体値一覧
+        final String spinnerItemLV[] = {"50","100"};//レベル一覧
         Spinner spinnerIV = findViewById(R.id.individualValueSpinner);
         Spinner spinnerLV = findViewById(R.id.levelSpinner);
 
         ArrayAdapter adapterIV = new ArrayAdapter(this, android.R.layout.simple_spinner_item, spinnerItemIV);
         adapterIV.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerIV.setAdapter(adapterIV);
+
         spinnerIV.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             //選択された時の処理
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //スピナーで選択された値をEditTextにセットしたい
-
+                //mainメソッドにeditIndividualValueが定義されているからまとめたい
+                final EditText editIndividualValue = (EditText) findViewById(R.id.individualValue);
+                editIndividualValue.setText(spinnerItemIV[position], TextView.BufferType.NORMAL);
             }
-
             @Override
             //選択されなかった時の処理
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
 
@@ -152,6 +155,15 @@ public class MainActivity extends AppCompatActivity {
         adapterLV.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerLV.setAdapter(adapterLV);
 
+        spinnerLV.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                final EditText editLevel = (EditText) findViewById(R.id.level);
+                editLevel.setText(spinnerItemLV[position], TextView.BufferType.NORMAL);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
 
 
 
